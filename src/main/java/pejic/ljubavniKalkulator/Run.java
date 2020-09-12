@@ -5,10 +5,17 @@
  */
 package pejic.ljubavniKalkulator;
 
+import pejic.ljubavniKalkulator.algoritam.HowToLove;
+
 /**
  *
  * @author Pejić
  */
 public class Run {
     
+    public static void main(String[] args) {
+       
+        HowToLove.checkLove("Loro", "Petra");
+       
+    }
 }
