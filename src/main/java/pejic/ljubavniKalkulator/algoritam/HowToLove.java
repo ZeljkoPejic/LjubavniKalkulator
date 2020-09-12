@@ -46,9 +46,9 @@ public class HowToLove {
             break;
         }
         
-        System.out.println("Vole se " + zbrajac(brojevi) + "%");
+        
 
-        return 0;
+        return zbrajac(brojevi);
 
     }
 

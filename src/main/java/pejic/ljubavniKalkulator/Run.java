@@ -5,7 +5,7 @@
  */
 package pejic.ljubavniKalkulator;
 
-import pejic.ljubavniKalkulator.algoritam.HowToLove;
+import pejic.ljubavniKalkulator.view.LoveKalkulator;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Run {
     
     public static void main(String[] args) {
        
-        HowToLove.checkLove("Loro", "Petra");
+        new LoveKalkulator().setVisible(true);
        
     }
 }
