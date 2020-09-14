@@ -22,37 +22,32 @@ public class HowToLove {
         char[] znakovi = ime.toLowerCase().toCharArray();
         List<Integer> brojevi = new ArrayList<>();
         int count = 1;
-        int i=0, j=1;
-        
+        int i = 0, j = 1;
+
         Arrays.sort(znakovi);
-                
-        while(true){
-            
-            while(j<=ime.length()-1){
-                
-                if ( znakovi[i] == znakovi[j] ) {
-                    count++;
-                    j++;
-                    continue;
-                }
-                
-                brojevi.add(count);
-                count=1;
-                i=j;
+
+        while (j <= ime.length() - 1) {
+
+            if (znakovi[i] == znakovi[j]) {
+                count++;
                 j++;
-                
+                continue;
             }
+
             brojevi.add(count);
-            break;
+            count = 1;
+            i = j;
+            j++;
+
         }
-        
+        brojevi.add(count);
         
 
-        return zbrajac(brojevi);
+        return sumator(brojevi);
 
     }
 
-    private static int zbrajac(List<Integer> num) {
+    private static int sumator(List<Integer> num) {
 
         int broj = 0, x = 0;
         List<Integer> brojcic = new ArrayList<>();
@@ -64,12 +59,12 @@ public class HowToLove {
 
         while (itr.hasNext()) {
 
-            if(num.size()==1){
-                broj+=itr.next();
+            if (num.size() == 1) {
+                broj += itr.next();
                 brojcic.add(broj);
                 break;
             }
-            
+
             broj += itr.next();
             x++;
 
@@ -89,8 +84,8 @@ public class HowToLove {
 
         }
 
-        return zbrajac(brojcic);
- 
+        return sumator(brojcic);
+
     }
 
     private static boolean checkNumValue(int broj) {
